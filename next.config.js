@@ -1,7 +1,23 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-}
+	reactStrictMode: true,
+	swcMinify: true,
+	pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
+	webpack: (config) => {
+		config.module.rules.push({
+			test: /\.md$/,
+			use: [
+				{
+					loader: "html-loader",
+				},
+				{
+					loader: "markdown-loader",
+				},
+			],
+		});
 
-module.exports = nextConfig
+		return config;
+	},
+};
+
+module.exports = nextConfig;
