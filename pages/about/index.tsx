@@ -1,15 +1,28 @@
 import * as React from "react";
 import { FC, useState, useEffect } from "react";
 
-import Main from "@/components/Main";
+import Markdown from "@/components/Markdown";
 import post from "@/_posts/about.md";
+import { MaleRounded } from "@mui/icons-material";
+import { Box, Container } from "@mui/material";
 
 const AboutPage: FC = () => {
-	const posts = [post];
-
 	return (
 		<>
-			<Main title="post" posts={posts}></Main>
+			<Box
+				sx={{
+					bgcolor: "#fff",
+					boxShadow: 1,
+					borderRadius: 2,
+					p: 4,
+					maxWidth: 4 / 5,
+					minWidth: 300,
+					margin: "auto",
+					my: 4,
+				}}
+			>
+				<Markdown className="markdown">{post}</Markdown>
+			</Box>
 		</>
 	);
 };
