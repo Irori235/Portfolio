@@ -16,7 +16,6 @@ WORKDIR /app
 
 # Copy artifacts
 COPY ./next.config.js .
-COPY ./.next ./.next
 
 # Copy node_modules
 COPY --from=base /app/node_modules ./node_modules

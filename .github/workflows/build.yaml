@@ -1,0 +1,44 @@
+name: Build docker image and push to Artifact Registry
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Authenticate to Google Cloud
+        id: auth
+        uses: google-github-actions/auth@v1
+        with:
+          token_format: access_token
+          workload_identity_provider: "projects/${{ secrets.GOOGLE_PROJECT_ID }}/locations/global/workloadIdentityPools/${{ secrets.GOOGLE_WID_POOL_ID }}/providers/${{ secrets.GOOGLE_WID_PROVIDER_ID }}"
+          service_account: ${{ secrets.GOOGLE_SA_EMAIL }}
+          access_token_lifetime: 300
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Login to GAR
+        uses: docker/login-action@v3
+        with:
+          registry: asia-northeast1-docker.pkg.dev
+          username: oauth2accesstoken
+          password: ${{ steps.auth.outputs.access_token }}
+      - name: Create Tag SHA
+        id: create-tag-sha
+        run: |
+          echo ${{ github.sha }} | cut -c 1-7 | awk '{print "sha="$0}' >> $GITHUB_OUTPUT
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: |
+            asia-northeast1-docker.pkg.dev/irori-gcloud/irori-dev/portfolio:${{ steps.create-tag-sha.outputs.sha }}
+            asia-northeast1-docker.pkg.dev/irori-gcloud/irori-dev/portfolio:latest
