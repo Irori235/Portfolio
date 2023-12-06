@@ -13,20 +13,22 @@
 - AWS
 - Google Cloud
 - Terraform
-
-
+- Kubernetes
 
 
 ## History
 1. Summer Internship 2022 at GMO kitaQ バックエンド（2022/09）
 1. Coefont Co., Ltd. バックエンド (2022/09 ~ Current) <br />
 1. EuphoPia Co.,Ltd. インフラ (2023/02 ~ 2023/03) <br />
-1. Miyagi Hackathon 2023 バックエンド（2023/03)
+1. Miyagi Hackathon 2023 バックエンド（2023/03) <br />
+1. freee summer internship SRE DXチーム（2023/09) <br />
+1. Cybozu summer internship Yukimiチーム（2023/10)
 
 ## Works
 
 - [ToDo リスト](https://github.com/Irori235/ToDoList-Server)
 - [Cashly](https://cashly.irori235.dev)
+- [Connect](https://connect.irori235.dev)
 - ポートフォリオ(This page)
 
 
