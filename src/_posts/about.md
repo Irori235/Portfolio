@@ -18,7 +18,7 @@
 
 ## History
 1. Summer Internship 2022 at GMO kitaQ バックエンド（2022/09）
-1. Coefont Co., Ltd. バックエンド (2022/09 ~ Current) <br />
+1. Coefont Co., Ltd. バックエンド (2022/09 ~ 2023/06) <br />
 1. EuphoPia Co.,Ltd. インフラ (2023/02 ~ 2023/03) <br />
 1. Miyagi Hackathon 2023 バックエンド（2023/03) <br />
 1. freee summer internship SRE DXチーム（2023/09) <br />
