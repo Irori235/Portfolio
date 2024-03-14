@@ -27,7 +27,7 @@
 ## Works
 
 - [ToDo リスト](https://github.com/Irori235/ToDoList-Server)
-- [Cashly](https://cashly.irori235.dev)
+- [Cashly](https://cashly.apps.irori235.dev)
 - [Connect](https://connect.irori235.dev)
 - ポートフォリオ(This page)
 
