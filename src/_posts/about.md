@@ -23,7 +23,7 @@
 1. Miyagi Hackathon 2023 バックエンド（2023/03) <br />
 1. freee summer internship SRE DXチーム（2023/09) <br />
 1. Cybozu summer internship Yukimiチーム（2023/10) <br />
-1. Gree Jobs 開発本部 インフラストラクチャー部 (2023/03)
+1. Gree Jobs 開発本部 インフラストラクチャー部 (2024/03)
 
 
 ## Works
