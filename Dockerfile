@@ -1,14 +1,17 @@
 FROM node:20 AS base
 
+# Install pnpm
+RUN npm install -g pnpm
+
 WORKDIR /app
-COPY ./package.json ./yarn.lock ./
-RUN yarn install --frozen-lockfile --production
+COPY ./package.json ./pnpm-lock.yaml ./
+RUN pnpm install --frozen-lockfile --prod
 COPY . .
 
 FROM base AS builder
 
 WORKDIR /app
-RUN yarn build 
+RUN pnpm build 
 
 FROM gcr.io/distroless/nodejs20
 
