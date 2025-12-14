@@ -23,7 +23,8 @@
 1. freee summer internship SRE DXチーム（2023/09) <br />
 1. Cybozu summer internship Yukimiチーム（2023/10) <br />
 1. Gree Jobs 開発本部 インフラストラクチャー部 (2024/03) <br />
-1. Plaid Karte Messageチーム (2024/10 - 2025/03)
+1. Plaid Karte Messageチーム (2024/10 - 2025/03) <br />
+1. LINEヤフー サマーインターンシップ 社内PaaS (2025/08 - 2025/09)
 
 ## Works
 
